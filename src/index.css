@@ -1,0 +1,118 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  padding: 2rem;
+  background: hsl(205, 78%, 60%);
+  border-radius: 0.25rem;
+  color: #fff;
+}
+
+.board h2 {
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.board p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  color: #fff;
+  font-weight: 700;
+}
+
+.board p :last-child {
+  display: flex;
+  align-items: center;
+  letter-spacing: 2px;
+  font-size: medium;
+  height: max-content;
+}
+
+.board p :last-child .icon path {
+  stroke: #fff;
+}
+
+.board .container {
+  display: grid;
+  grid-template-columns: repeat(7, 70px);
+  grid-template-rows: repeat(7, 70px);
+  gap: 2px 2px;
+}
+
+.board .container .square {
+  background: hsl(205, 90%, 88%);
+  display: flex;
+  color: #222;
+  font-size: 3rem;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  color: hsl(205, 78%, 60%);
+  cursor: pointer;
+}
+
+.board .container .square .icon path {
+  stroke: hsl(205, 78%, 60%);
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+.modal .content {
+  background-color: hsl(205, 100%, 93%);
+  padding: 20px;
+  border-radius: 0.5rem;
+}
+
+.modal .content h2 {
+  margin-bottom: 20px;
+  color: #222;
+  font-size: 2rem;
+}
+
+.modal .content button {
+  cursor: pointer;
+  background-color: hsl(205, 78%, 60%);
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 0.25rem;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+}
+
+.modal .content button:hover {
+  letter-spacing: 2px;
+}
